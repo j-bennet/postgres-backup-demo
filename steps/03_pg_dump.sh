@@ -5,5 +5,8 @@
 # --schema-only
 # --schema=pattern
 # --table=pattern
-# --filter=filter
+# --filter=filter_file.txt
+# --format (custom, directory, tar, plain) [custom, directory, tar] -> pg_restore
 pg_dump -U postgres mytestdb --no-comments -f dump-mytestdb.sql
+
+pg_dump -U postgres mytestdb --no-comments -f dump-mytestdb.custom --format=custom

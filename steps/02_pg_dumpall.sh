@@ -4,5 +4,6 @@
 # --data-only
 # --schema-only
 # --exclude-database=pattern
-# --filter=filter
+# --filter=filter_file.txt
+# --format (custom, directory, tar, plain) [custom, directory, tar] -> pg_restore
 pg_dumpall -U postgres --no-comments -f dump-all-dbs.sql
